@@ -1,10 +1,10 @@
-<?php 
-include ('include/session.php');
+<?php
+	#Read session start file.
+	include ('include/session.php');
 
 	# Open database connection.
 	require ( 'connect_db.php' );
-	echo '<div class="container">
-			<div class="row">';	
+	echo '<div class="row">';	
 	# Retrieve items from 'products' database table.
 	$q = "SELECT * FROM products" ;
 	$r = mysqli_query( $link, $q ) ;
@@ -17,7 +17,7 @@ include ('include/session.php');
 	echo '
     <div class="col-md-3 d-flex justify-content-center">
 	 <div class="card" style="width: 18rem;">
-	  <img src="'. $row['item_img'].'" class="card-img-top" alt="'. $row['item_name'].'">
+	  <img src="'. $row['item_img'].'" class="card-img-top" style="width:300px;height:300px;" alt="'. $row['item_name'].'">
 	   <div class="card-body text-center">
 		<h5 class="card-title">'. $row['item_name'].'</h5>
 		<p class="card-text">'. $row['item_desc'].'</p>
@@ -26,7 +26,7 @@ include ('include/session.php');
 		<p class="card-text">&pound '. $row['item_price'].'</p>
 	  </div>
 	  <div class="card-footer text-muted">
-		<a href="added.php?id='.$row['id'].'" class="btn btn-light btn-block">Add to Cart</a>
+		<a href="added.php?id='.$row['item_id'].'" class="btn btn-light btn-block">Add to Cart</a>
 	   </div>
 	  </div>
 	</div>  
@@ -38,10 +38,5 @@ include ('include/session.php');
 	# Or display message.
 	else { echo '<p>There are currently no items in the table to display.</p>
 	' ; }
-	
 	include ('include/footer.html');
-	
 ?>	
-	
-	
-	
