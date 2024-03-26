@@ -15,9 +15,9 @@
 	while ( $row = mysqli_fetch_array( $r, MYSQLI_ASSOC ))
 	{
 	echo '
-    <div class="col-md-3 d-flex justify-content-center">
+    <div class="col-md-3 d-flex justify-content-center mt-4">
 	 <div class="card" style="width: 18rem;">
-	  <img src="'. $row['item_img'].'" class="card-img-top" style="width:300px;height:300px;" alt="'. $row['item_name'].'">
+	  <img src="'. $row['item_img'].'" class="card-img-top" style="width:250px;height:200px;" alt="'. $row['item_name'].'">
 	   <div class="card-body text-center">
 		<h5 class="card-title">'. $row['item_name'].'</h5>
 		<p class="card-text">'. $row['item_desc'].'</p>
