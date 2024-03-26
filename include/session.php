@@ -22,9 +22,16 @@ if ( !isset( $_SESSION[ 'user_id' ] ) ) { require ( 'login_tools.php' ) ; load()
 	.card{
 		margin-bottom: 20px;
 	}
+
+  nav {
+    font-family: "Roboto", sans-serif;
+ 
+  }
  
   .intro {
-    background: url(https://plus.unsplash.com/premium_photo-1669500762189-7cc47d910275?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODl8fHdhdGNofGVufDB8fDB8fHww);
+    background-image: url(https://plus.unsplash.com/premium_photo-1669500762189-7cc47d910275?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODl8fHdhdGNofGVufDB8fDB8fHww);
+    background-repeat: no-repeat;
+    background-size: 40% 100%;
     width: 100vw;
     height:50vh;
     color: white;
@@ -33,27 +40,19 @@ if ( !isset( $_SESSION[ 'user_id' ] ) ) { require ( 'login_tools.php' ) ; load()
     font-family: "Italiana", sans-serif;
   }
 
-  #span1{
+  .intro-p{
     position: absolute;
-    top: 35%;
+    font-size: 2rem;
+    top: 80%;
     left: 3%;
   }
 
-  #span2{
+  .intro-text{
+    color: black;
     position: absolute;
-    top: 15%;
-    left: 33%;
-  }
-
-  #span3{
-    position: absolute;
-    top: 35%;
-    left: 63%;
-  }
-  #span4{
-    position: absolute;
-    top: 15%;
-    right:3%;
+    left: 50%;
+    top: 30%;
+    font-weight: 600;
   }
 </style>
 <!-- fontawesome script -->
@@ -83,10 +82,8 @@ if ( !isset( $_SESSION[ 'user_id' ] ) ) { require ( 'login_tools.php' ) ; load()
   </div>
 </nav>
 <div class='intro'>
-  <p><span id='span1'>Be</span>
-  <span id='span2'>Right</span>
-  <span id='span3'>On</span>
-  <span id='span4'>Time!</span></p>
+  <p class='intro-p'>Be Right On Time.</p>
+  <div class="intro-text">Discover our wide selection of watches!</div>
   <!-- <img src="https://plus.unsplash.com/premium_photo-1669500762189-7cc47d910275?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODl8fHdhdGNofGVufDB8fDB8fHww" alt="intro-img"> -->
 </div>
-<div class="container">
+<div class="container mt-4">
